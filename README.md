@@ -1,27 +1,48 @@
-# MyWorkspace
+[![GitHub license](https://img.shields.io/github/license/navneetlal/ng-offline?style=flat-square)](https://github.com/navneetlal/ng-offline/blob/master/LICENSE)
+![npm](https://img.shields.io/npm/v/ng-offline?color=blue&style=flat-square)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+# NgOffline
+A simple angular module which enables directives `ngOnline` and `ngOffline` to make conditional rendering of component based on network status.
 
-## Development server
+### Installing
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+$ npm install ng-offline --save
+```
 
-## Code scaffolding
+### Basic usage
+Import `NgOfflineModule` into your ngModule and start using directives `ngOnline` and `ngOffline` within your html component.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+##### **`app.module.ts`**
+```ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-## Build
+import { NgOfflineModule } from 'ng-offline';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+import { AppComponent } from './app.component';
 
-## Running unit tests
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    NgOfflineModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##### **`app.component.html`**
+```html
+<div ngOnline>Hey! You are online</div>
+<div ngOffline>You're offline. Check your connection!</div>
+```
 
-## Running end-to-end tests
+First div container will only be visible when network status in online and second div will be visible after network status in offline.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### License
+Published under the [MIT License](https://github.com/navneetlal/react-offline-component/blob/master/LICENSE).

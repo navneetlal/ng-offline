@@ -1,8 +1,25 @@
 {
   "name": "ng-offline",
-  "version": "0.0.1-alpha.4",
+  "version": "0.1.0",
+  "description": "A simple angular directive which checks whether network connectivity is available or not.",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/navneetlal/ng-offline/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navneetlal/ng-offline"
+  },
+  "homepage": "https://github.com/navneetlal/ng-offline/tree/master/projects/ng-offline#readme",
+  "keywords": [
+    "angular",
+    "ng-offline",
+    "offline",
+    "online"
+  ],
+  "author": "Navneet Lal Gupta",
+  "license": "MIT"
 }

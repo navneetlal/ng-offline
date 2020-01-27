@@ -1,5 +1,8 @@
+[![GitHub license](https://img.shields.io/github/license/navneetlal/ng-offline?style=flat-square)](https://github.com/navneetlal/ng-offline/blob/master/LICENSE)
+![npm](https://img.shields.io/npm/v/ng-offline?color=blue&style=flat-square)
+
 # NgOffline
-A simple angular directive which checks whether network connectivity is available or not.
+A simple angular module which enables directives `ngOnline` and `ngOffline` to make conditional rendering of component based on network status.
 
 ### Installing
 
@@ -38,6 +41,8 @@ export class AppModule { }
 <div ngOnline>Hey! You are online</div>
 <div ngOffline>You're offline. Check your connection!</div>
 ```
+
+First div container will only be visible when network status in online and second div will be visible after network status in offline.
 
 ### License
 Published under the [MIT License](https://github.com/navneetlal/react-offline-component/blob/master/LICENSE).
